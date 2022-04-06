@@ -11,7 +11,7 @@ export function getPerson(): IPersonData {
     return {
         name: 'Petr',
         secondName: 'Smith',
-        age: '7',
+        age: 7,
     };
 }
 
@@ -26,6 +26,7 @@ export interface IStudentData {
 Допишите функцию `getStudentsData` так, чтобы она возвращала массив из указанных в комментарии данных.
 Данные должны храниться в объектах, соответствующих интерфейсу `IStudentData`.
  */
+
 export function getStudentsData(): IStudentData[] {
     /**
      * Данные студентов которые нужно передать:
@@ -35,4 +36,27 @@ export function getStudentsData(): IStudentData[] {
      * 3. Petr Ivanov 19 лет
      *
      */
+    const student1: IStudentData = {
+        name: 'Ivan',
+        secondName: 'Petrov',
+        age: 20,
+        phone: '+7(555)555-55-50',
+    };
+
+    const student2: IStudentData = {
+        name: 'Stepan',
+        secondName: 'Petrov',
+        age: 19,
+        phone: '+7(555)555-55-51',
+    };
+
+    const student3: IStudentData = {
+        name: 'Petr',
+        secondName: 'Ivanov',
+        age: 19,
+    };
+
+    const arr = [student1, student2, student3];
+
+    return arr;
 }
